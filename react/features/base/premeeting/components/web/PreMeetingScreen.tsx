@@ -256,7 +256,6 @@ const PreMeetingScreen = ({
                             )}
                             {children}
                         </div>
-                        {_buttons.length && <Toolbox toolbarButtons = { _buttons } />}
                         <div className = { classes.paddedContent }>
                             {skipPrejoinButton}
                             {showUnsafeRoomWarning && <UnsafeRoomWarning />}
