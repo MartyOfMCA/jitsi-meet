@@ -12,7 +12,8 @@ const useStyles = makeStyles()(theme => {
             backgroundColor: 'rgba(0, 0, 0, 0.8)',
             boxSizing: 'border-box',
             height: '28px',
-            borderRadius: `0 ${theme.shape.borderRadius}px ${theme.shape.borderRadius}px 0`,
+            // The room name is removed so the border radius has to be full.
+            borderRadius: `${theme.shape.borderRadius}px`,
             marginRight: '2px',
 
             '@media (max-width: 300px)': {
