@@ -10,6 +10,12 @@ import isEmbeddedInterfaceConfigWhitelist from './isEmbeddedInterfaceConfigWhite
  * @type Array
  */
 export default [
+    // Allow Ancient Media to be used as app name.
+    'APP_NAME',
+    // Allow redirection to Ancient Media website.
+    'JITSI_WATERMARK_LINK',
+    // Allow redirection to Ancient Media contact page.
+    'SUPPORT_URL',
     'AUDIO_LEVEL_PRIMARY_COLOR',
     'AUDIO_LEVEL_SECONDARY_COLOR',
     'AUTO_PIN_LATEST_SCREEN_SHARE',

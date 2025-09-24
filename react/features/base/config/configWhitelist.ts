@@ -13,6 +13,8 @@ import isEmbeddedConfigWhitelist from './isEmbeddedConfigWhitelist';
  * @type Array
  */
 export default [
+    // Allow the modification of the logo on Ancient Meet.
+    'defaultLogoUrl',
     '_desktopSharingSourceDevice',
     '_peerConnStatusOutOfLastNTimeout',
     '_peerConnStatusRtcMuteTimeout',
