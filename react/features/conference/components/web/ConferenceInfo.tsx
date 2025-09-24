@@ -79,10 +79,6 @@ const COMPONENTS: Array<{
         id: 'raised-hands-count'
     },
     {
-        Component: VideoQualityLabel,
-        id: 'video-quality'
-    },
-    {
         Component: VisitorsCountLabel,
         id: 'visitors-count'
     },
