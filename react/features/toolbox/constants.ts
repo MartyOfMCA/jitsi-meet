@@ -143,6 +143,8 @@ export const SPINNER_COLOR = '#929292';
  * @type Array<string>
  */
 export const TOOLBAR_BUTTONS: ToolbarButton[] = [
+    // Add reactions to toolbar used in conference.
+    'reactions',
     'camera',
     'chat',
     'closedcaptions',

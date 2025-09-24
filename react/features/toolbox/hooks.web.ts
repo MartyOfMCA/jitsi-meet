@@ -270,61 +270,21 @@ function useHelpButton() {
 */
 export function useToolboxButtons(
         _customToolbarButtons?: ICustomToolbarButton[]): { [key: string]: IToolboxButton; } {
-    const desktopSharing = getDesktopSharingButton();
     const toggleCameraButton = useToggleCameraButton();
-    const _fullscreen = getFullscreenButton();
-    const security = useSecurityDialogButton();
     const reactions = useReactionsButton();
     const participants = useParticipantPaneButton();
-    const tileview = useTileViewButton();
-    const cc = useClosedCaptionButton();
     const recording = useRecordingButton();
-    const liveStreaming = useLiveStreamingButton();
-    const linktosalesforce = useLinkToSalesforceButton();
-    const shareaudio = getShareAudioButton();
-    const shareVideo = useSharedVideoButton();
-    const whiteboard = useWhiteboardButton();
-    const etherpad = useEtherpadButton();
-    const virtualBackground = useVirtualBackgroundButton();
-    const speakerStats = useSpeakerStatsButton();
-    const shortcuts = useKeyboardShortcutsButton();
-    const embed = useEmbedButton();
-    const feedback = useFeedbackButton();
-    const _download = useDownloadButton();
-    const _help = useHelpButton();
 
     const buttons: { [key in ToolbarButton]?: IToolboxButton; } = {
         microphone,
         camera,
-        profile,
-        desktop: desktopSharing,
         chat,
         raisehand,
         reactions,
         'participants-pane': participants,
-        invite,
-        tileview,
         'toggle-camera': toggleCameraButton,
-        videoquality: videoQuality,
-        fullscreen: _fullscreen,
-        security,
-        closedcaptions: cc,
         recording,
-        livestreaming: liveStreaming,
-        linktosalesforce,
-        sharedvideo: shareVideo,
-        shareaudio,
-        noisesuppression: noiseSuppression,
-        whiteboard,
-        etherpad,
-        'select-background': virtualBackground,
-        stats: speakerStats,
         settings,
-        shortcuts,
-        embedmeeting: embed,
-        feedback,
-        download: _download,
-        help: _help
     };
     const buttonKeys = Object.keys(buttons) as ToolbarButton[];
 
