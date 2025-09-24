@@ -9,7 +9,7 @@ const useStyles = makeStyles()(theme => {
             ...theme.typography.labelRegular,
             color: theme.palette.text01,
             padding: '6px 8px',
-            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            backgroundColor: '#013229AA', // Ancient Media theme.
             boxSizing: 'border-box',
             height: '28px',
             // The room name is removed so the border radius has to be full.
