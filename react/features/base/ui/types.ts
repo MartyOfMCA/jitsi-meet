@@ -6,6 +6,7 @@ interface ITypographyType {
 }
 
 export interface IPalette {
+    action0: string;
     action01: string;
     action01Active: string;
     action01Hover: string;

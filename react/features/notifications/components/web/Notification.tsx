@@ -39,7 +39,7 @@ interface IProps extends INotificationProps {
 const useStyles = makeStyles()((theme: Theme) => {
     return {
         container: {
-            backgroundColor: theme.palette.ui10,
+            backgroundColor: theme.palette.ui01,
             padding: '8px 16px 8px 20px',
             display: 'flex',
             position: 'relative' as const,
@@ -85,7 +85,7 @@ const useStyles = makeStyles()((theme: Theme) => {
             borderRadius: '4px',
 
             '&.normal': {
-                backgroundColor: theme.palette.action01
+                backgroundColor: theme.palette.action0
             },
 
             '&.error': {
@@ -113,7 +113,7 @@ const useStyles = makeStyles()((theme: Theme) => {
             display: 'flex',
             flexDirection: 'column' as const,
             justifyContent: 'space-between',
-            color: theme.palette.text04,
+            color: theme.palette.text01,
             flex: 1,
             margin: '0 8px',
 
@@ -204,7 +204,7 @@ const Notification = ({
 
     const ICON_COLOR = {
         error: theme.palette.iconError,
-        normal: theme.palette.action01,
+        normal: theme.palette.action0,
         success: theme.palette.success01,
         warning: theme.palette.warning01
     };
@@ -356,7 +356,7 @@ const Notification = ({
                 { !disableClosing && (
                     <Icon
                         className = { classes.closeIcon }
-                        color = { theme.palette.icon04 }
+                        color = { theme.palette.ui10 }
                         id = 'close-notification'
                         onClick = { onDismiss }
                         size = { 20 }

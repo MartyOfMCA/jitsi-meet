@@ -23,6 +23,7 @@ export const colorMap = {
     // ----- Actions -----
 
     // Primary
+    action0: 'action0', // This mapping defines the while color to be used for action components.
     action01: 'action01',
     action01Hover: 'hover01',
     action01Active: 'active01',
