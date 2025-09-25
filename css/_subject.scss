@@ -18,6 +18,7 @@
         }
 
         &.visible {
+            overflow: visible;
             animation: showSubject forwards .6s ease-out;
         }
     }

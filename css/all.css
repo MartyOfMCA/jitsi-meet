@@ -2398,6 +2398,7 @@ body[dir="rtl"] #layout_wrapper > * {
     justify-content: flex-start;
 }
 .subject#autoHide.with-always-on.visible {
+    overflow: visible; /* This will ensure the entire conference info is shown without having any truncated edges. This is particularly the case when the always-visible components (raisehands) are showing */
     animation: showSubject forwards 0.6s ease-out;
 }
 .subject-info-container {
