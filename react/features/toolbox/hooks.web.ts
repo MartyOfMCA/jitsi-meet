@@ -272,7 +272,6 @@ export function useToolboxButtons(
         _customToolbarButtons?: ICustomToolbarButton[]): { [key: string]: IToolboxButton; } {
     const toggleCameraButton = useToggleCameraButton();
     const reactions = useReactionsButton();
-    const participants = useParticipantPaneButton();
     const recording = useRecordingButton();
 
     const buttons: { [key in ToolbarButton]?: IToolboxButton; } = {
@@ -281,7 +280,6 @@ export function useToolboxButtons(
         chat,
         raisehand,
         reactions,
-        'participants-pane': participants,
         'toggle-camera': toggleCameraButton,
         recording,
         settings,
