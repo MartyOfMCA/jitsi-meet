@@ -8,6 +8,7 @@ export const colorMap = {
     uiBackground: 'surface01',
 
     // Container backgrounds
+    ui0: 'surface0', // This mapping defines the color for the Ancient Media theme with no alpha channel modifications.
     ui01: 'surface02',
     ui02: 'surface03',
     ui03: 'ui02',

@@ -20,6 +20,7 @@ import RaisedHandsCountLabel from './RaisedHandsCountLabel';
 import SpeakerStatsLabel from './SpeakerStatsLabel';
 import SubjectText from './SubjectText';
 import ToggleTopPanelLabel from './ToggleTopPanelLabel';
+import ConferenceInfoParticipantsCounterWithIcon from './ConferenceInfoParticipantsCounterWithIcon';
 
 /**
  * The type of the React {@code Component} props of {@link Subject}.
@@ -56,6 +57,11 @@ const COMPONENTS: Array<{
     {
         Component: ConferenceTimer,
         id: 'conference-timer'
+    },
+    // Add the participants count to the components rendered in the conference info.
+    {
+        Component: ConferenceInfoParticipantsCounterWithIcon,
+        id: 'participants-counter',
     },
     {
         Component: SpeakerStatsLabel,

@@ -4,6 +4,8 @@ export const CONFERENCE_INFO = {
         'highlight-moment',
         'subject',
         'conference-timer',
+        // Add the participants-counter id here in case the one specified in config.js is not loaded.
+        'participants-counter',
         'participants-count',
         'e2ee',
         'transcribing',
