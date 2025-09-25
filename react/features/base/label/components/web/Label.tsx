@@ -84,7 +84,10 @@ const useStyles = makeStyles()(theme => {
         },
         [COLORS.red]: {
             background: theme.palette.actionDanger
-        }
+        },
+        [COLORS.ancientTrans]: {
+            background:theme.palette.ui01,
+        },
     };
 });
 

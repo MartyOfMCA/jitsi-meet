@@ -38,7 +38,7 @@ function SpeakerStatsLabel() {
             content = { t('speakerStats.labelTooltip', { count }) }
             position = { 'bottom' }>
             <Label
-                color = { COLORS.white }
+                color = { COLORS.ancientTrans }
                 icon = { IconUsers }
                 iconColor = '#fff'
                 // eslint-disable-next-line react/jsx-no-bind
