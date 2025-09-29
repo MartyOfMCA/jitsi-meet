@@ -278,7 +278,6 @@ export function useToolboxButtons(
     const buttons: { [key in ToolbarButton]?: IToolboxButton; } = {
         microphone,
         camera,
-        chat,
         raisehand,
         reactions,
         'participants-pane': participants,
