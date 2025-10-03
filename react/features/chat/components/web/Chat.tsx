@@ -151,7 +151,7 @@ const useStyles = makeStyles<{ _isResizing: boolean; width: number; }>()((theme,
 
         chatPanelNoTabs: {
             // extract header height
-            height: 'calc(100% - 60px)'
+            height: '300px'
         },
 
         pollsPanel: {
