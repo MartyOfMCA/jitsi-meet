@@ -24,6 +24,7 @@ const useStyles = makeStyles()(theme => {
     return {
         messageGroup: {
             display: 'flex',
+            gap: '8px',
             flexDirection: 'column',
             maxWidth: '100%',
 
