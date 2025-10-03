@@ -115,7 +115,10 @@ export const colorMap = {
     // ----- Support -----
 
     support05: 'support05',
-    support06: 'support06'
+    support06: 'support06',
+    
+    // Transparent color
+    trans: "trans"
 };
 
 

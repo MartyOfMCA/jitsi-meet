@@ -60,6 +60,7 @@ export interface IPalette {
     uiBackground: string;
     warning01: string;
     warning02: string;
+    trans: string;
 }
 
 export interface ITypography {

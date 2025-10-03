@@ -9,7 +9,7 @@ import { isMobileBrowser } from '../../../base/environment/utils';
 import { translate } from '../../../base/i18n/functions';
 import { IconFaceSmile, IconSend } from '../../../base/icons/svg';
 import Button from '../../../base/ui/components/web/Button';
-import Input from '../../../base/ui/components/web/Input';
+import CustomChatInput from '../../../base/ui/components/web/CustomChatInput';
 import { CHAT_SIZE } from '../../constants';
 import { areSmileysDisabled, isSendGroupChatDisabled } from '../../functions';
 
@@ -188,7 +188,7 @@ class ChatInput extends Component<IProps, IState> {
                             </div>
                         </div>
                     )}
-                    <Input
+                    <CustomChatInput
                         className = 'chat-input'
                         icon = { this.props._areSmileysDisabled ? undefined : IconFaceSmile }
                         iconClick = { this._toggleSmileysPanel }
