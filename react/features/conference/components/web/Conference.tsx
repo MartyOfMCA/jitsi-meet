@@ -239,7 +239,7 @@ class Conference extends AbstractConference<IProps, any> {
                 onMouseLeave = { this._onMouseLeave }
                 onMouseMove = { this._onMouseMove }
                 ref = { this._setBackground }>
-                <Chat />
+                { _showPrejoin || _showLobby || <Chat /> }
                 <div
                     className = { _layoutClassName }
                     id = 'videoconference_page'
