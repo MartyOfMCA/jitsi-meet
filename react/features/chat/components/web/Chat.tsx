@@ -425,12 +425,6 @@ const Chat = ({
                     <MessageContainer
                         messages = { _messages } />
                     <MessageRecipient />
-                    <Select
-                        containerClassName = { cx(classes.privateMessageRecipientsList) }
-                        id = 'select-chat-recipient'
-                        onChange = { onSelectedRecipientChange }
-                        options = { options }
-                        value = { privateMessageRecipient?.id || OPTION_GROUPCHAT } />
                     <ChatInput
                         onSend = { onSendMessage } />
                 </div>
