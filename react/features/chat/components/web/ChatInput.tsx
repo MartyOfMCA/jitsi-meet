@@ -8,7 +8,7 @@ import { IReduxState, IStore } from '../../../app/types';
 import { isMobileBrowser } from '../../../base/environment/utils';
 import { translate } from '../../../base/i18n/functions';
 import { IconFaceSmile, IconSend } from '../../../base/icons/svg';
-import Button from '../../../base/ui/components/web/Button';
+import ChatButton from '../../../base/ui/components/web/ChatButton';
 import CustomChatInput from '../../../base/ui/components/web/CustomChatInput';
 import { CHAT_SIZE } from '../../constants';
 import { areSmileysDisabled, isSendGroupChatDisabled } from '../../functions';
@@ -200,7 +200,7 @@ class ChatInput extends Component<IProps, IState> {
                         ref = { this._textArea }
                         textarea = { true }
                         value = { this.state.message } />
-                    <Button
+                    <ChatButton
                         accessibilityLabel = { this.props.t('chat.sendButton') }
                         disabled = { !this.state.message.trim() }
                         icon = { IconSend }
