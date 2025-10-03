@@ -408,7 +408,6 @@ const Chat = ({
     function renderChat() {
         return (
             <>
-                {renderTabs()}
                 <div
                     aria-labelledby = { ChatTabs.CHAT }
                     className = { cx(
@@ -593,6 +592,7 @@ function _mapStateToProps(state: IReduxState, _ownProps: any) {
     return {
         _isModal: window.innerWidth <= SMALL_WIDTH_THRESHOLD,
         _isOpen: isOpen,
+        // This config is picked up from the server and so are other configs. You can completely omit the server checks by replacing with a boolean directly.
         _isPollsEnabled: !arePollsDisabled(state),
         _isCCTabEnabled: isCCTabEnabled(state),
         _isFileSharingTabEnabled: isFileSharingEnabled(state),
