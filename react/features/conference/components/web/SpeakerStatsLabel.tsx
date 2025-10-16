@@ -29,7 +29,7 @@ function SpeakerStatsLabel() {
         dispatch(openDialog(SpeakerStats, { conference }));
     };
 
-    if (count <= 2 || _isSpeakerStatsDisabled) {
+    if (count <= 1 || _isSpeakerStatsDisabled) {
         return null;
     }
 
