@@ -92,7 +92,8 @@ interface IProps extends AbstractProps {
 const useStyles = makeStyles<{ _isResizing: boolean; width: number; }>()((theme, { _isResizing, width }) => {
     return {
         container: {
-            backgroundColor: theme.palette.ui01,
+            // Modify alpha channel of ui0 palette (ancient media theme color).
+            backgroundColor: `${theme.palette.ui0}33`,
             flexShrink: 0,
             overflow: 'hidden',
             position: 'absolute',
@@ -101,6 +102,8 @@ const useStyles = makeStyles<{ _isResizing: boolean; width: number; }>()((theme,
             transition: _isResizing ? undefined : 'width .16s ease-in-out',
             width: `${width}px`,
             zIndex: 300,
+            borderRadius: '32px',
+            border: `1px solid ${theme.palette.ui01}`,
 
             '&:hover, &:focus-within': {
                 '& .dragHandleContainer': {
@@ -540,11 +543,6 @@ const Chat = ({
             className = { classes.container }
             id = 'sideToolbarContainer'
             onKeyDown = { onEscClick } >
-            <ChatHeader
-                className = { cx('chat-header', classes.chatHeader) }
-                isCCTabEnabled = { _isCCTabEnabled }
-                isPollsEnabled = { _isPollsEnabled }
-                onCancel = { onToggleChat } />
             {_showNamePrompt
                 ? <DisplayNameForm
                     isCCTabEnabled = { _isCCTabEnabled }
