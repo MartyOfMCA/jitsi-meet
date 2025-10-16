@@ -25,7 +25,7 @@ import { IMessage } from './types';
 
 const DEFAULT_STATE = {
     groupChatWithPermissions: false,
-    isOpen: false,
+    isOpen: true,
     messages: [],
     notifyPrivateRecipientsChangedTimestamp: undefined,
     reactions: {},
