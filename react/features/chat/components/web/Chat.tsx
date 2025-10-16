@@ -95,7 +95,9 @@ const useStyles = makeStyles<{ _isResizing: boolean; width: number; }>()((theme,
             backgroundColor: theme.palette.ui01,
             flexShrink: 0,
             overflow: 'hidden',
-            position: 'relative',
+            position: 'absolute',
+            bottom: '10rem',
+            right: '.5rem',
             transition: _isResizing ? undefined : 'width .16s ease-in-out',
             width: `${width}px`,
             zIndex: 300,
@@ -107,12 +109,10 @@ const useStyles = makeStyles<{ _isResizing: boolean; width: number; }>()((theme,
             },
 
             '@media (max-width: 580px)': {
-                height: '100dvh',
-                position: 'fixed',
                 left: 0,
                 right: 0,
-                top: 0,
-                width: 'auto'
+                width: '90%',
+                marginInline: 'auto',
             },
 
             '*': {
