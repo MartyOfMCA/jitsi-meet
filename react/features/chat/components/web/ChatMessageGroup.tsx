@@ -26,10 +26,7 @@ const useStyles = makeStyles()(theme => {
             gap: '8px',
             flexDirection: 'column',
             maxWidth: '100%',
-
-            '&.remote': {
-                maxWidth: 'calc(100% - 40px)' // 100% - avatar and margin
-            }
+            width: '100%',
         },
 
         groupContainer: {

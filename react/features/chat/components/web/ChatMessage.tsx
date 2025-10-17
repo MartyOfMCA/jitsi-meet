@@ -27,6 +27,7 @@ const useStyles = makeStyles()((theme: Theme) => {
     return {
         chatMessageFooter: {
             display: 'flex',
+            gap: '4px',
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -38,13 +39,16 @@ const useStyles = makeStyles()((theme: Theme) => {
             overflow: 'hidden'
         },
         chatMessageWrapper: {
+            width: '100%',
             maxWidth: '100%'
         },
         chatMessage: {
             display: 'inline-flex',
             padding: '12px',
-            backgroundColor: theme.palette.ui02,
+            backgroundColor: `${theme.palette.ui0}33`,
             borderRadius: '4px 12px 12px 12px',
+            border: `1px solid ${theme.palette.ui0}99`,
+            width: '100%',
             maxWidth: '100%',
             marginTop: '4px',
             boxSizing: 'border-box' as const,
@@ -60,7 +64,7 @@ const useStyles = makeStyles()((theme: Theme) => {
                     backgroundColor: theme.palette.support05
                 },
                 '&.local': {
-                    backgroundColor: theme.palette.ui04,
+                    backgroundColor: `${theme.palette.ui0}33`,
                     borderRadius: '12px 4px 12px 12px',
 
                     '&.privatemessage': {
@@ -98,7 +102,7 @@ const useStyles = makeStyles()((theme: Theme) => {
             display: 'flex',
             alignItems: 'center',
             gap: theme.spacing(1),
-            backgroundColor: theme.palette.grey[800],
+            backgroundColor: theme.palette.trans,
             borderRadius: theme.shape.borderRadius,
             padding: theme.spacing(0, 1),
             cursor: 'pointer'
@@ -131,18 +135,17 @@ const useStyles = makeStyles()((theme: Theme) => {
         },
         displayName: {
             ...theme.typography.labelBold,
-            color: theme.palette.text02,
+            color: theme.palette.text01,
             whiteSpace: 'nowrap',
             textOverflow: 'ellipsis',
             overflow: 'hidden',
-            marginBottom: theme.spacing(1),
-            maxWidth: '130px'
         },
         userMessage: {
             ...theme.typography.bodyShortRegular,
             color: theme.palette.text01,
             whiteSpace: 'pre-wrap',
-            wordBreak: 'break-word'
+            wordBreak: 'break-word',
+            marginTop: theme.spacing(1),
         },
         privateMessageNotice: {
             ...theme.typography.labelRegular,
@@ -151,7 +154,7 @@ const useStyles = makeStyles()((theme: Theme) => {
         },
         timestamp: {
             ...theme.typography.labelRegular,
-            color: theme.palette.text03,
+            color: theme.palette.text01,
             marginTop: theme.spacing(1),
             marginLeft: theme.spacing(1),
             whiteSpace: 'nowrap',

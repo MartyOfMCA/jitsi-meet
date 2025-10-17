@@ -64,13 +64,12 @@ const useStyles = makeStyles()(theme => {
         },
 
         input: {
-            backgroundColor: theme.palette.trans,
-            background: theme.palette.trans,
+            backgroundColor: `${theme.palette.ui0}33`,
             color: theme.palette.text01,
             ...theme.typography.bodyShortRegular,
             padding: '10px 16px',
-            borderRadius: theme.shape.borderRadius,
-            outline: '1px solid #FFFFFF50',
+            borderRadius: '999px',
+            outline: `1px solid ${theme.palette.ui0}99`,
             border: 0,
             height: '40px',
             boxSizing: 'border-box',
@@ -82,7 +81,7 @@ const useStyles = makeStyles()(theme => {
 
             '&:focus': {
                 outline: 0,
-                boxShadow: `0px 0px 0px 2px ${theme.palette.focus01}`
+                boxShadow: `0px 0px 0px 2px ${theme.palette.ui0}33`
             },
 
             '&:disabled': {

@@ -122,16 +122,14 @@ const useStyles = makeStyles()(theme => {
         },
 
         disabled: {
-            backgroundColor: theme.palette.trans,
+            backgroundColor: `${theme.palette.ui0}33`,
             color: theme.palette.text03,
 
             '&:hover': {
-                backgroundColor: theme.palette.trans,
                 color: theme.palette.text03
             },
 
             '&:active': {
-                backgroundColor: theme.palette.trans,
                 color: theme.palette.text03
             },
 

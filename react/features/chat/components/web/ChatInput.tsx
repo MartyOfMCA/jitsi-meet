@@ -196,7 +196,7 @@ class ChatInput extends Component<IProps, IState> {
                         maxRows = { 5 }
                         onChange = { this._onMessageChange }
                         onKeyPress = { this._onDetectSubmit }
-                        placeholder = { this.props.t('chat.messagebox') }
+                        placeholder = { `${this.props.t('chat.messagebox')}...` }
                         ref = { this._textArea }
                         textarea = { true }
                         value = { this.state.message } />
