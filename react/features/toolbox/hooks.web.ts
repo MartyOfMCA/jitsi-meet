@@ -274,6 +274,7 @@ export function useToolboxButtons(
     const reactions = useReactionsButton();
     const participants = useParticipantPaneButton();
     const recording = useRecordingButton();
+    const { role } = getLocalParticipant(APP.store.getState()) ?? {};
 
     const buttons: { [key in ToolbarButton]?: IToolboxButton; } = {
         microphone,
@@ -285,6 +286,17 @@ export function useToolboxButtons(
         recording,
         settings,
     };
+    // When bundled assets are run, participants
+    // can have their roles as `none`.
+    if(role && ["participant", "none"].includes(role)) {
+        delete buttons.camera;
+        delete buttons['toggle-camera'];
+        delete buttons.recording;
+        delete buttons.settings;
+        delete buttons['participants-pane'];
+    }else if (role === "moderator") {
+        delete buttons.raisehand;
+    }
     const buttonKeys = Object.keys(buttons) as ToolbarButton[];
 
     buttonKeys.forEach(
