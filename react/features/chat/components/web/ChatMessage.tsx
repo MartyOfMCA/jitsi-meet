@@ -31,7 +31,7 @@ const useStyles = makeStyles()((theme: Theme) => {
             alignItems: 'center',
             marginTop: theme.spacing(1)
         },
-        chatMessageFooterLeft: {
+        chatMessageFooterRight: {
             display: 'flex',
             flexGrow: 1,
             overflow: 'hidden'
@@ -361,14 +361,14 @@ const ChatMessage = ({
                                 {(message.privateMessage || (message.lobbyChat && !knocking))
                                     && _renderPrivateNotice()}
                                 <div className = { classes.chatMessageFooter }>
-                                    <div className = { classes.chatMessageFooterLeft }>
+                                    {_renderTimestamp()}
+                                    <div className = { classes.chatMessageFooterRight }>
                                         {message.reactions && message.reactions.size > 0 && (
                                             <>
                                                 {renderReactions}
                                             </>
                                         )}
                                     </div>
-                                    {_renderTimestamp()}
                                 </div>
                             </div>
                         </div>
