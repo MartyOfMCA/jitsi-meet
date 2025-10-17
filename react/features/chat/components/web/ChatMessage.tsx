@@ -379,20 +379,20 @@ const ChatMessage = ({
                         {!message.privateMessage && !message.lobbyChat
                         && !message.isReaction && <div>
                             <div className = { classes.optionsButtonContainer }>
-                                {isHovered && <ReactButton
+                                <ReactButton
                                     messageId = { message.messageId }
-                                    receiverId = { '' } />}
+                                    receiverId = { '' } />
                             </div>
                         </div>}
                         <div>
                             <div className = { classes.optionsButtonContainer }>
-                                {isHovered && <MessageMenu
+                                <MessageMenu
                                     displayName = { message.displayName }
                                     enablePrivateChat = { Boolean(enablePrivateChat) }
                                     isFromVisitor = { message.isFromVisitor }
                                     isLobbyMessage = { message.lobbyChat }
                                     message = { message.message }
-                                    participantId = { message.participantId } />}
+                                    participantId = { message.participantId } />
                             </div>
                         </div>
                     </div>
