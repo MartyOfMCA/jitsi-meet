@@ -14,6 +14,7 @@ import { IChatMessageProps } from '../../types';
 
 import MessageMenu from './MessageMenu';
 import ReactButton from './ReactButton';
+import Avatar from '../../../base/avatar/components/Avatar';
 
 interface IProps extends IChatMessageProps {
     className?: string;
@@ -186,6 +187,16 @@ const useStyles = makeStyles()((theme: Theme) => {
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap'
+        },
+        publisher: {
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+        },
+        avatar: {
+            position: 'sticky',
+            flexShrink: 0,
+            top: 0
         }
     };
 });
@@ -349,7 +360,13 @@ const ChatMessage = ({
                     ) }>
                     <div className = { classes.replyWrapper }>
                         <div className = { cx('messagecontent', classes.messageContent) }>
-                            {showDisplayName && _renderDisplayName()}
+                            <div className= { cx('publisher', classes.publisher) } >
+                                <Avatar
+                                    className = { cx('avatar', classes.avatar) }
+                                    participantId = { message.participantId }
+                                    size = { 32 } />
+                                {showDisplayName && _renderDisplayName()}
+                            </div>
                             <div className = { cx('usermessage', classes.userMessage) }>
                                 <Message
                                     screenReaderHelpText = { message.displayName === message.recipient

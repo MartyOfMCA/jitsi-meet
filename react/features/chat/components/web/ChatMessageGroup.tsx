@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import React from 'react';
 import { makeStyles } from 'tss-react/mui';
 
-import Avatar from '../../../base/avatar/components/Avatar';
 import { IMessage } from '../../types';
 
 import ChatMessage from './ChatMessage';
@@ -38,19 +37,8 @@ const useStyles = makeStyles()(theme => {
 
             '&.local': {
                 justifyContent: 'flex-end',
-
-                '& .avatar': {
-                    display: 'none'
-                }
             }
         },
-
-        avatar: {
-            margin: `${theme.spacing(1)} ${theme.spacing(2)} ${theme.spacing(3)} 0`,
-            position: 'sticky',
-            flexShrink: 0,
-            top: 0
-        }
     };
 });
 
@@ -65,10 +53,6 @@ const ChatMessageGroup = ({ className = '', messages }: IProps) => {
 
     return (
         <div className = { clsx(classes.groupContainer, className) }>
-            <Avatar
-                className = { clsx(classes.avatar, 'avatar') }
-                participantId = { messages[0].participantId }
-                size = { 32 } />
             <div className = { `${classes.messageGroup} chat-message-group ${className}` }>
                 {messages.map((message, i) => (
                     <ChatMessage
