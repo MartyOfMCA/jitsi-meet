@@ -647,31 +647,6 @@ class Filmstrip extends PureComponent <IProps, IState> {
                     _verticalViewGrid && 'no-vertical-padding',
                     _verticalViewBackground && classes.filmstripBackground) }
                 style = { filmstripStyle }>
-                <span
-                    aria-level = { 1 }
-                    className = 'sr-only'
-                    role = 'heading'>
-                    { t('filmstrip.accessibilityLabel.heading') }
-                </span>
-                { toolbar }
-                {_resizableFilmstrip
-                    ? <div
-                        className = { clsx('resizable-filmstrip', classes.resizableFilmstripContainer,
-                            _topPanelFilmstrip && 'top-panel-filmstrip',
-                            _alwaysShowResizeBar && 'always-show-resize-bar') }>
-                        <div
-                            className = { clsx('dragHandleContainer',
-                                classes.dragHandleContainer,
-                                (isMouseDown || _alwaysShowResizeBar) && 'visible',
-                                _topPanelFilmstrip && 'top-panel')
-                            }
-                            onMouseDown = { this._onDragHandleMouseDown }>
-                            <div className = { clsx(classes.dragHandle, 'dragHandle') } />
-                        </div>
-                        {filmstrip}
-                    </div>
-                    : filmstrip
-                }
                 <AudioTracksContainer />
             </div>
         );
