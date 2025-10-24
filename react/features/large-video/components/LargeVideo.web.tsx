@@ -246,6 +246,7 @@ class LargeVideo extends Component<IProps> {
                         id = 'largeVideoWrapper'
                         onTouchEnd = { this._onDoubleTap }
                         ref = { this._wrapperRef }
+                        style={{ marginInline: 'auto' }}
                         role = 'figure' >
                         <video
                             autoPlay = { !_noAutoPlayVideo }
