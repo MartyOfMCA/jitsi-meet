@@ -158,7 +158,6 @@ export const TOOLBAR_BUTTONS: ToolbarButton[] = [
     'hangup',
     'help',
     'highlight',
-    'invite',
     'linktosalesforce',
     'livestreaming',
     'microphone',
