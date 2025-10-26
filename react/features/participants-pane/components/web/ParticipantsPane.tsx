@@ -45,7 +45,8 @@ const useStyles = makeStyles<IStylesProps>()((theme, { isChatOpen }) => {
         participantsPane: {
             backgroundColor: theme.palette.ui01,
             flexShrink: 0,
-            position: 'relative',
+            position: 'absolute',
+            left: '0',
             transition: 'width .16s ease-in-out',
             width: '315px',
             zIndex: isMobileBrowser() && isChatOpen ? -1 : 0,
