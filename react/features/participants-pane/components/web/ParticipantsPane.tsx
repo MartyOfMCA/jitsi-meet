@@ -7,7 +7,7 @@ import { IReduxState } from '../../../app/types';
 import participantsPaneTheme from '../../../base/components/themes/participantsPaneTheme.json';
 import { openDialog } from '../../../base/dialog/actions';
 import { isMobileBrowser } from '../../../base/environment/utils';
-import { IconCloseLarge, IconDotsHorizontal } from '../../../base/icons/svg';
+import { IconCloseLarge, IconDotsHorizontal, IconMicSlash } from '../../../base/icons/svg';
 import { isLocalParticipantModerator } from '../../../base/participants/functions';
 import Button from '../../../base/ui/components/web/Button';
 import ClickableIcon from '../../../base/ui/components/web/ClickableIcon';
@@ -222,6 +222,7 @@ const ParticipantsPane = () => {
                             accessibilityLabel = { t('participantsPane.actions.muteAll') }
                             labelKey = { 'participantsPane.actions.muteAll' }
                             onClick = { onMuteAll }
+                            icon={IconMicSlash}
                             type = { BUTTON_TYPES.SECONDARY } />
                     )}
                     {showMoreActionsButton && (
