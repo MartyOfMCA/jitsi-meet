@@ -7,6 +7,14 @@ export enum FakeParticipant {
     Whiteboard = 'Whiteboard'
 }
 
+export enum EMediaProTypes {
+    NONE = "0",
+    STAR = "1",
+    HOT = "2",
+    ULTIMA = "3",
+    VIP = "4",
+};
+
 export interface IParticipant {
     avatarURL?: string;
     botType?: string;
@@ -41,6 +49,7 @@ export interface IParticipant {
     role?: string;
     sources?: Map<string, Map<string, ISourceInfo>>;
     supportsRemoteControl?: boolean;
+    proType?: EMediaProTypes;
 }
 
 export interface ILocalParticipant extends IParticipant {

@@ -10,6 +10,7 @@ import { parseURLParams } from '../util/parseURLParams';
 
 import { SETTINGS_UPDATED } from './actionTypes';
 import { updateSettings } from './actions';
+import { EMediaProTypes } from '../participants/types';
 
 /**
  * The middleware of the feature base/settings. Distributes changes to the state
@@ -93,8 +94,9 @@ function _updateLocalParticipantFromUrl({ dispatch, getState }: IStore) {
     const urlEmail = urlParams['userInfo.email'];
     const urlDisplayName = urlParams['userInfo.displayName'];
     const urlAvatar = urlParams['userInfo.avatar'];
+    const urlProType = urlParams['userInfo.proType'];
 
-    if (!urlEmail && !urlDisplayName && !urlAvatar) {
+    if (!urlEmail && !urlDisplayName && !urlAvatar && !urlProType) {
         return;
     }
 
@@ -104,12 +106,14 @@ function _updateLocalParticipantFromUrl({ dispatch, getState }: IStore) {
         const displayName = escape(urlDisplayName);
         const email = escape(urlEmail);
         const avatarURL = escape(urlAvatar);
+        const proType = escape(urlProType);
 
         dispatch(participantUpdated({
             ...localParticipant,
             email,
             name: displayName,
             avatarURL,
+            proType: proType as EMediaProTypes,
         }));
 
         dispatch(updateSettings({
