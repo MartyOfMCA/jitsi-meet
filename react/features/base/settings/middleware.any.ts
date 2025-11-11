@@ -92,8 +92,9 @@ function _updateLocalParticipantFromUrl({ dispatch, getState }: IStore) {
         = parseURLParams(getState()['features/base/connection'].locationURL ?? '');
     const urlEmail = urlParams['userInfo.email'];
     const urlDisplayName = urlParams['userInfo.displayName'];
+    const urlAvatar = urlParams['userInfo.avatar'];
 
-    if (!urlEmail && !urlDisplayName) {
+    if (!urlEmail && !urlDisplayName && !urlAvatar) {
         return;
     }
 
@@ -102,11 +103,13 @@ function _updateLocalParticipantFromUrl({ dispatch, getState }: IStore) {
     if (localParticipant) {
         const displayName = escape(urlDisplayName);
         const email = escape(urlEmail);
+        const avatarURL = escape(urlAvatar);
 
         dispatch(participantUpdated({
             ...localParticipant,
             email,
-            name: displayName
+            name: displayName,
+            avatarURL,
         }));
 
         dispatch(updateSettings({
