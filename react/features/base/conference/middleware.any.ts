@@ -373,6 +373,14 @@ function _conferenceJoined({ dispatch, getState }: IStore, next: Function, actio
     const isMod = conference.getParticipants().length === 0;
     if (isMod) {
         dispatch(togglePinStageParticipant(participantId))
+    } else {
+        console.log("Finding the moderator");
+        for (const [key, value] of getRemoteParticipants(getState)) {
+            if (value.role === "moderator") {
+                console.log("pin user with id", key, value);
+                dispatch(togglePinStageParticipant(key));
+            }
+        }
     }
 
     return result;
