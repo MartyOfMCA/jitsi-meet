@@ -35,7 +35,8 @@ import { PARTICIPANT_ROLE } from '../participants/constants';
 import {
     getLocalParticipant,
     getParticipantById,
-    getPinnedParticipant
+    getPinnedParticipant,
+    getRemoteParticipants
 } from '../participants/functions';
 import MiddlewareRegistry from '../redux/MiddlewareRegistry';
 import StateListenerRegistry from '../redux/StateListenerRegistry';
@@ -72,6 +73,7 @@ import {
 } from './functions';
 import logger from './logger';
 import { IConferenceMetadata } from './reducer';
+import { togglePinStageParticipant } from '../../filmstrip/actions.web';
 
 /**
  * Handler for before unload event.
@@ -362,6 +364,15 @@ function _conferenceJoined({ dispatch, getState }: IStore, next: Function, actio
         dispatch(openDisplayNamePrompt({
             validateInput: hasDisplayName
         }));
+    }
+    const participant= getParticipantById(getState, conference.myUserId());
+    console.log("participant", participant);
+    console.log("conference.getParticipants", conference.getParticipants())
+    console.log("getRemoteParticipants", getRemoteParticipants(getState))
+    const participantId = conference.myUserId();
+    const isMod = conference.getParticipants().length === 0;
+    if (isMod) {
+        dispatch(togglePinStageParticipant(participantId))
     }
 
     return result;
